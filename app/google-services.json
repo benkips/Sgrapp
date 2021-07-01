@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "142913644531",
+    "firebase_url": "https://locusttracker.firebaseio.com",
+    "project_id": "locusttracker",
+    "storage_bucket": "locusttracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142913644531:android:4fd33015ab0569cd961486",
+        "android_client_info": {
+          "package_name": "com.ekarantechnologies.locusttracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142913644531-5oiighl5k74s5fbk5qaei3a59mov70ul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG7zfgCeeIG_QgfKT7gzQ2Evy0Qkn-FCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142913644531-5oiighl5k74s5fbk5qaei3a59mov70ul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142913644531:android:6312644dc9c45fc4961486",
+        "android_client_info": {
+          "package_name": "com.karucu.karumain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142913644531-5oiighl5k74s5fbk5qaei3a59mov70ul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG7zfgCeeIG_QgfKT7gzQ2Evy0Qkn-FCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142913644531-5oiighl5k74s5fbk5qaei3a59mov70ul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142913644531:android:0ca61c83a9e5d579961486",
+        "android_client_info": {
+          "package_name": "com.mabnets.sgrapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142913644531-5oiighl5k74s5fbk5qaei3a59mov70ul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG7zfgCeeIG_QgfKT7gzQ2Evy0Qkn-FCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142913644531-5oiighl5k74s5fbk5qaei3a59mov70ul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
