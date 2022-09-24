@@ -8,7 +8,7 @@ import com.mabnets.sgrapp.R
 import com.mabnets.sgrapp.databinding.FragmentLauncherBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class Launcher : Fragment(R.layout.fragment_launcher) {
     private var _binding: FragmentLauncherBinding? = null
     private val binding get() = _binding!!
@@ -22,7 +22,7 @@ class Launcher : Fragment(R.layout.fragment_launcher) {
     }
     override fun onResume() {
         super.onResume()
-        handler.postDelayed(runnable,1000)
+        handler.postDelayed(runnable,500)
     }
 
     override fun onPause() {

@@ -18,7 +18,7 @@ import com.mabnets.sgrapp.R
 import com.mabnets.sgrapp.databinding.FragmentMainfragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class mainfragment : Fragment(R.layout.fragment_mainfragment) {
     private var _binding: FragmentMainfragmentBinding? = null
     private val binding get() = _binding!!

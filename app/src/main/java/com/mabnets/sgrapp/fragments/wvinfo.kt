@@ -26,7 +26,7 @@ import com.mabnets.sgrapp.databinding.FragmentWvinfoBinding
 import com.mabnets.sgrapp.utils.visible
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class wvinfo : Fragment(R.layout.fragment_wvinfo) {
     private  var _binding : FragmentWvinfoBinding?=null
     private val binding get() = _binding!!

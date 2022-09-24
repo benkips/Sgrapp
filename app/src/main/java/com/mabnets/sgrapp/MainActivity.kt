@@ -18,8 +18,9 @@ import com.google.android.gms.ads.MobileAds
 import com.mabnets.sgrapp.databinding.ActivityMainBinding
 import com.mabnets.sgrapp.utils.showPermissionRequestExplanation
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 @RequiresApi(Build.VERSION_CODES.M)
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var requestPermissionLauncher: ActivityResultLauncher<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
