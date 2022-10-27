@@ -45,12 +45,12 @@ class mainfragment : Fragment(R.layout.fragment_mainfragment) {
             )
 
         }
-        binding.content.ct.setOnClickListener {v->
+        /*binding.content.ct.setOnClickListener {v->
             val c = "https://metickets.krc.co.ke/check-ticket.php"
             Navigation.findNavController(v).navigate(R.id.action_mainfragment_to_wvinfo,
                 bundleOf("web" to c)
             )
-        }
+        }*/
         binding.content.nh.setOnClickListener {v->
             val c = "https://metickets.krc.co.ke/information.php#howitworks"
             Navigation.findNavController(v).navigate(R.id.action_mainfragment_to_wvinfo,
@@ -66,11 +66,11 @@ class mainfragment : Fragment(R.layout.fragment_mainfragment) {
         }
 
 
-        adView = AdView(context)
+        adView = AdView(context!!)
         binding.content.bannerContainertwo.addView(adView)
         adView.adUnitId ="ca-app-pub-4814079884774543/5646925535"
 
-        adView.adSize = adSize
+        adView.setAdSize(AdSize.BANNER)
         val adRequest = AdRequest
             .Builder()
             .build()
@@ -92,7 +92,7 @@ class mainfragment : Fragment(R.layout.fragment_mainfragment) {
             }
 
             val adWidth = (adWidthPixels / density).toInt()
-            return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, adWidth)
+            return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context!!, adWidth)
         }
     override fun onDestroy() {
         super.onDestroy()
