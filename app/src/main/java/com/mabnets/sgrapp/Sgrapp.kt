@@ -7,8 +7,10 @@ import android.os.Bundle
 import android.provider.MediaStore.getVersion
 import android.util.Log
 import android.widget.Toast
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.google.android.gms.ads.*
@@ -21,7 +23,7 @@ private const val AD_UNIT_ID = "ca-app-pub-4814079884774543/1110985931"
 private const val LOG_TAG = "Sgrapp"
 
 /** Application class that initializes, loads and show ads when activities change states. */
-class Sgrapp : Application(), Application.ActivityLifecycleCallbacks, LifecycleObserver {
+class Sgrapp : Application(), Application.ActivityLifecycleCallbacks,  LifecycleObserver {
 
     private lateinit var appOpenAdManager: AppOpenAdManager
     private var currentActivity: Activity? = null
@@ -115,7 +117,6 @@ class Sgrapp : Application(), Application.ActivityLifecycleCallbacks, LifecycleO
                 context,
                 AD_UNIT_ID,
                 request,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
                 object : AppOpenAd.AppOpenAdLoadCallback() {
                     /**
                      * Called when an app open ad has loaded.
@@ -128,7 +129,7 @@ class Sgrapp : Application(), Application.ActivityLifecycleCallbacks, LifecycleO
                         loadTime = Date().time
                         Log.d(LOG_TAG, "onAdLoaded.")
                         //Toast.makeText(context, "onAdLoaded", Toast.LENGTH_SHORT).show()
-                        Log.d(LOG_TAG, "onAdLoaded" + MobileAds.getVersion())
+                        //Log.d(LOG_TAG, "onAdLoaded" + MobileAds.getVersionString())
                     }
 
                     /**
@@ -139,7 +140,7 @@ class Sgrapp : Application(), Application.ActivityLifecycleCallbacks, LifecycleO
                     override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                         isLoadingAd = false
                         Log.d(LOG_TAG, "onAdFailedToLoad: " + loadAdError.message)
-                       // Toast.makeText(context, "onAdFailedToLoad", Toast.LENGTH_SHORT).show()
+                        // Toast.makeText(context, "onAdFailedToLoad", Toast.LENGTH_SHORT).show()
 
                     }
                 }
@@ -219,7 +220,7 @@ class Sgrapp : Application(), Application.ActivityLifecycleCallbacks, LifecycleO
                         appOpenAd = null
                         isShowingAd = false
                         Log.d(LOG_TAG, "onAdFailedToShowFullScreenContent: " + adError.message)
-                        Toast.makeText(activity, "onAdFailedToShowFullScreenContent", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(activity, "onAdFailedToShowFullScreenContent", Toast.LENGTH_SHORT).show()
 
                         onShowAdCompleteListener.onShowAdComplete()
                         loadAd(activity)

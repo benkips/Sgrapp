@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
@@ -29,14 +30,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var requestPermissionLauncher: ActivityResultLauncher<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         installSplashScreen()
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         val navController = findNavController(R.id.nav_host_fragment_content_index)
-        MobileAds.initialize(this) { }
+        //MobileAds.initialize(this) { }
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.mainfragment
@@ -62,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                     requestStoragePermission()
                 }
             }
-        requestStoragePermission()
+        //requestStoragePermission()
     }
     //asking for permission
     private fun requestStoragePermission(){

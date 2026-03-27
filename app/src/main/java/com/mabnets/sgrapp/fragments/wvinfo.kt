@@ -42,10 +42,6 @@ class wvinfo : Fragment(R.layout.fragment_wvinfo) {
         super.onViewCreated(view, savedInstanceState)
         _binding= FragmentWvinfoBinding.bind(view)
 
-        CookieManager.getInstance().setAcceptCookie(false);
-        if (android.os.Build.VERSION.SDK_INT >= 21) {
-            CookieManager.getInstance().setAcceptThirdPartyCookies(binding.wvvs, false);
-        }
 
 
         var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->

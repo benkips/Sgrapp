@@ -52,7 +52,7 @@ class mainfragment : Fragment(R.layout.fragment_mainfragment) {
             )
         }*/
         binding.content.nh.setOnClickListener {v->
-            val c = "https://metickets.krc.co.ke/information.php#howitworks"
+            val c = "https://metickets.krc.co.ke/contact-us.php"
             Navigation.findNavController(v).navigate(R.id.action_mainfragment_to_wvinfo,
                 bundleOf("web" to c)
             )
